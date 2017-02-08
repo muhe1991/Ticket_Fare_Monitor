@@ -1,18 +1,3 @@
-# from skyscanner.skyscanner import Flights
-#
-# flights_service = Flights('mu293657274204318608131037136936')
-# result = flights_service.get_result(
-#     country='UK',
-#     currency='GBP',
-#     locale='en-GB',
-#     originplace='SIN-sky',
-#     destinationplace='KUL-sky',
-#     outbounddate='2017-05-28',
-#     inbounddate='2017-05-31',
-#     adults=1).parsed
-#
-# print(result)
-
 import json
 import db
 import os
