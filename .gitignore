@@ -1,0 +1,7 @@
+# Pycharm related files
+# /.idea/*
+
+*.pyc
+
+# Google API key file
+*.key

@@ -1,0 +1,949 @@
+{
+ "kind": "qpxExpress#tripsSearch",
+ "trips": {
+  "kind": "qpxexpress#tripOptions",
+  "requestId": "ZbNsG96ekHYkz7Qc00Pw5Y",
+  "data": {
+   "kind": "qpxexpress#data",
+   "airport": [
+    {
+     "kind": "qpxexpress#airportData",
+     "code": "MUC",
+     "city": "MUC",
+     "name": "Munich Franz Joseph Strauss Int'l"
+    },
+    {
+     "kind": "qpxexpress#airportData",
+     "code": "PEK",
+     "city": "BJS",
+     "name": "Beijing Capital International"
+    }
+   ],
+   "city": [
+    {
+     "kind": "qpxexpress#cityData",
+     "code": "BJS",
+     "name": "Beijing"
+    },
+    {
+     "kind": "qpxexpress#cityData",
+     "code": "MUC",
+     "name": "Munich"
+    }
+   ],
+   "aircraft": [
+    {
+     "kind": "qpxexpress#aircraftData",
+     "code": "333",
+     "name": "Airbus A330"
+    },
+    {
+     "kind": "qpxexpress#aircraftData",
+     "code": "346",
+     "name": "Airbus A340"
+    }
+   ],
+   "tax": [
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "DE_001",
+     "name": "Germany Airport Security Charge"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "CN_001",
+     "name": "China Airport Fee"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "YR_I",
+     "name": "LH YR surcharge"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "YQ_I",
+     "name": "LH YQ surcharge"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "OY_001",
+     "name": "Germany Air Transport Tax"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "RA_002",
+     "name": "German Passenger Service Charge"
+    }
+   ],
+   "carrier": [
+    {
+     "kind": "qpxexpress#carrierData",
+     "code": "CA",
+     "name": "Air China Limited"
+    },
+    {
+     "kind": "qpxexpress#carrierData",
+     "code": "LH",
+     "name": "Deutsche Lufthansa AG"
+    }
+   ]
+  },
+  "tripOption": [
+   {
+    "kind": "qpxexpress#tripOption",
+    "saleTotal": "EUR598.54",
+    "id": "ePsPPkG8hH4NEl7xWZyo71001",
+    "slice": [
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 580,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 580,
+        "flight": {
+         "carrier": "LH",
+         "number": "722"
+        },
+        "id": "G5ThOCIri80FZsCU",
+        "cabin": "COACH",
+        "bookingCode": "K",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "0",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "Lfcd-J9cJSpvc2Lo",
+          "aircraft": "346",
+          "arrivalTime": "2017-09-16T11:00+08:00",
+          "departureTime": "2017-09-15T19:20+02:00",
+          "origin": "MUC",
+          "destination": "PEK",
+          "originTerminal": "2",
+          "destinationTerminal": "3",
+          "duration": 580,
+          "mileage": 4795,
+          "meal": "Meal"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 620,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 620,
+        "flight": {
+         "carrier": "LH",
+         "number": "723"
+        },
+        "id": "GcF1Udk7UpmQIFtG",
+        "cabin": "COACH",
+        "bookingCode": "K",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "1",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LevWP3FhePFzugdu",
+          "aircraft": "346",
+          "arrivalTime": "2017-10-03T17:00+02:00",
+          "departureTime": "2017-10-03T12:40+08:00",
+          "origin": "PEK",
+          "destination": "MUC",
+          "originTerminal": "3",
+          "destinationTerminal": "2",
+          "duration": 620,
+          "mileage": 4795,
+          "meal": "Meal"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "pricing": [
+     {
+      "kind": "qpxexpress#pricingInfo",
+      "fare": [
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AwMNkdU/d3FRWNqjDqnLW2mQ4ODH40ph8aMZq34fUmQg",
+        "carrier": "LH",
+        "origin": "MUC",
+        "destination": "BJS",
+        "basisCode": "KKNNDE"
+       },
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AwMNkdU/d3FRWNqjDqnLW2mQ4ODH40ph8aMZq34fUmQg",
+        "carrier": "LH",
+        "origin": "BJS",
+        "destination": "MUC",
+        "basisCode": "KKNNDE"
+       }
+      ],
+      "segmentPricing": [
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AwMNkdU/d3FRWNqjDqnLW2mQ4ODH40ph8aMZq34fUmQg",
+        "segmentId": "G5ThOCIri80FZsCU"
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AwMNkdU/d3FRWNqjDqnLW2mQ4ODH40ph8aMZq34fUmQg",
+        "segmentId": "GcF1Udk7UpmQIFtG"
+       }
+      ],
+      "baseFareTotal": "EUR140.00",
+      "saleFareTotal": "EUR140.00",
+      "saleTaxTotal": "EUR458.54",
+      "saleTotal": "EUR598.54",
+      "passengers": {
+       "kind": "qpxexpress#passengerCounts",
+       "adultCount": 1
+      },
+      "tax": [
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "DE_001",
+        "chargeType": "GOVERNMENT",
+        "code": "DE",
+        "country": "DE",
+        "salePrice": "EUR6.39"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YQ_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YQ",
+        "salePrice": "EUR360.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YR_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YR",
+        "salePrice": "EUR16.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "RA_002",
+        "chargeType": "GOVERNMENT",
+        "code": "RA",
+        "country": "DE",
+        "salePrice": "EUR21.97"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "OY_001",
+        "chargeType": "GOVERNMENT",
+        "code": "OY",
+        "country": "DE",
+        "salePrice": "EUR41.99"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "CN_001",
+        "chargeType": "GOVERNMENT",
+        "code": "CN",
+        "country": "CN",
+        "salePrice": "EUR12.19"
+       }
+      ],
+      "fareCalculation": "MUC LH BJS 74.84KKNNDE LH MUC 74.84KKNNDE NUC 149.68 END ROE 0.935287 FARE EUR 140.00 XT 6.39DE 41.99OY 21.97RA 12.19CN 360.00YQ 16.00YR",
+      "latestTicketingTime": "2017-02-06T21:56-05:00",
+      "ptc": "ADT"
+     }
+    ]
+   },
+   {
+    "kind": "qpxexpress#tripOption",
+    "saleTotal": "EUR625.00",
+    "id": "ePsPPkG8hH4NEl7xWZyo71002",
+    "slice": [
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 595,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 595,
+        "flight": {
+         "carrier": "CA",
+         "number": "962"
+        },
+        "id": "G3AtN8VRrSsca961",
+        "cabin": "COACH",
+        "bookingCode": "L",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "0",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LAksOFytOer03p1d",
+          "aircraft": "333",
+          "arrivalTime": "2017-09-16T06:10+08:00",
+          "departureTime": "2017-09-15T14:15+02:00",
+          "origin": "MUC",
+          "destination": "PEK",
+          "originTerminal": "2",
+          "destinationTerminal": "3",
+          "duration": 595,
+          "mileage": 4795,
+          "meal": "Breakfast"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 620,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 620,
+        "flight": {
+         "carrier": "CA",
+         "number": "6223"
+        },
+        "id": "GsaudlNjqdgUPcNz",
+        "cabin": "COACH",
+        "bookingCode": "L",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "1",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "L0A0weCs8bMc2mbT",
+          "aircraft": "346",
+          "arrivalTime": "2017-10-03T17:00+02:00",
+          "departureTime": "2017-10-03T12:40+08:00",
+          "origin": "PEK",
+          "destination": "MUC",
+          "originTerminal": "3",
+          "destinationTerminal": "2",
+          "duration": 620,
+          "operatingDisclosure": "OPERATED BY LUFTHANSA",
+          "mileage": 4795
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "pricing": [
+     {
+      "kind": "qpxexpress#pricingInfo",
+      "fare": [
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "A8roKwLvCtTJrPFYmEK708Lyp5JZsBgHX1ycXjPYrYJE",
+        "carrier": "CA",
+        "origin": "MUC",
+        "destination": "BJS",
+        "basisCode": "LKRTDE9"
+       },
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "carrier": "CA",
+        "origin": "BJS",
+        "destination": "MUC",
+        "basisCode": "LKRTLH"
+       }
+      ],
+      "segmentPricing": [
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "segmentId": "GsaudlNjqdgUPcNz"
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "A8roKwLvCtTJrPFYmEK708Lyp5JZsBgHX1ycXjPYrYJE",
+        "segmentId": "G3AtN8VRrSsca961"
+       }
+      ],
+      "baseFareTotal": "EUR205.00",
+      "saleFareTotal": "EUR205.00",
+      "saleTaxTotal": "EUR420.00",
+      "saleTotal": "EUR625.00",
+      "passengers": {
+       "kind": "qpxexpress#passengerCounts",
+       "adultCount": 1
+      },
+      "tax": [
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "DE_001",
+        "chargeType": "GOVERNMENT",
+        "code": "DE",
+        "country": "DE",
+        "salePrice": "EUR6.39"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YQ_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YQ",
+        "salePrice": "EUR7.46"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YR_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YR",
+        "salePrice": "EUR330.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "RA_002",
+        "chargeType": "GOVERNMENT",
+        "code": "RA",
+        "country": "DE",
+        "salePrice": "EUR21.97"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "OY_001",
+        "chargeType": "GOVERNMENT",
+        "code": "OY",
+        "country": "DE",
+        "salePrice": "EUR41.99"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "CN_001",
+        "chargeType": "GOVERNMENT",
+        "code": "CN",
+        "country": "CN",
+        "salePrice": "EUR12.19"
+       }
+      ],
+      "fareCalculation": "MUC CA BJS M 106.91LKRTDE9 CA MUC 112.26LKRTLH NUC 219.17 END ROE 0.935287 FARE EUR 205.00 XT 6.39DE 41.99OY 21.97RA 12.19CN 7.46YQ 330.00YR",
+      "latestTicketingTime": "2017-02-24T23:59-05:00",
+      "ptc": "ADT"
+     }
+    ]
+   },
+   {
+    "kind": "qpxexpress#tripOption",
+    "saleTotal": "EUR630.00",
+    "id": "ePsPPkG8hH4NEl7xWZyo71004",
+    "slice": [
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 595,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 595,
+        "flight": {
+         "carrier": "CA",
+         "number": "962"
+        },
+        "id": "G3AtN8VRrSsca961",
+        "cabin": "COACH",
+        "bookingCode": "L",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "0",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LAksOFytOer03p1d",
+          "aircraft": "333",
+          "arrivalTime": "2017-09-16T06:10+08:00",
+          "departureTime": "2017-09-15T14:15+02:00",
+          "origin": "MUC",
+          "destination": "PEK",
+          "originTerminal": "2",
+          "destinationTerminal": "3",
+          "duration": 595,
+          "mileage": 4795,
+          "meal": "Breakfast"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 620,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 620,
+        "flight": {
+         "carrier": "CA",
+         "number": "961"
+        },
+        "id": "GhzHhh0I6msTPfvv",
+        "cabin": "COACH",
+        "bookingCode": "T",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "1",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LVsUdycdsDzn+UrU",
+          "aircraft": "333",
+          "arrivalTime": "2017-10-03T05:30+02:00",
+          "departureTime": "2017-10-03T01:10+08:00",
+          "origin": "PEK",
+          "destination": "MUC",
+          "originTerminal": "3",
+          "destinationTerminal": "2",
+          "duration": 620,
+          "mileage": 4795,
+          "meal": "Breakfast"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "pricing": [
+     {
+      "kind": "qpxexpress#pricingInfo",
+      "fare": [
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "A8roKwLvCtTJrPFYmEK708Lyp5JZsBgHX1ycXjPYrYJE",
+        "carrier": "CA",
+        "origin": "MUC",
+        "destination": "BJS",
+        "basisCode": "LKRTDE9"
+       },
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AXxPWtIc8mmWC+KXefkimGaKEl3SVrp3tC8T1MEs+cl6",
+        "carrier": "CA",
+        "origin": "BJS",
+        "destination": "MUC",
+        "basisCode": "TKRTDE9"
+       }
+      ],
+      "segmentPricing": [
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "A8roKwLvCtTJrPFYmEK708Lyp5JZsBgHX1ycXjPYrYJE",
+        "segmentId": "G3AtN8VRrSsca961"
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AXxPWtIc8mmWC+KXefkimGaKEl3SVrp3tC8T1MEs+cl6",
+        "segmentId": "GhzHhh0I6msTPfvv"
+       }
+      ],
+      "baseFareTotal": "EUR240.00",
+      "saleFareTotal": "EUR240.00",
+      "saleTaxTotal": "EUR390.00",
+      "saleTotal": "EUR630.00",
+      "passengers": {
+       "kind": "qpxexpress#passengerCounts",
+       "adultCount": 1
+      },
+      "tax": [
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "DE_001",
+        "chargeType": "GOVERNMENT",
+        "code": "DE",
+        "country": "DE",
+        "salePrice": "EUR6.39"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YQ_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YQ",
+        "salePrice": "EUR7.46"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YR_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YR",
+        "salePrice": "EUR300.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "RA_002",
+        "chargeType": "GOVERNMENT",
+        "code": "RA",
+        "country": "DE",
+        "salePrice": "EUR21.97"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "OY_001",
+        "chargeType": "GOVERNMENT",
+        "code": "OY",
+        "country": "DE",
+        "salePrice": "EUR41.99"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "CN_001",
+        "chargeType": "GOVERNMENT",
+        "code": "CN",
+        "country": "CN",
+        "salePrice": "EUR12.19"
+       }
+      ],
+      "fareCalculation": "MUC CA BJS M 106.91LKRTDE9 CA MUC M 149.68TKRTDE9 NUC 256.59 END ROE 0.935287 FARE EUR 240.00 XT 6.39DE 41.99OY 21.97RA 12.19CN 7.46YQ 300.00YR",
+      "latestTicketingTime": "2017-09-08T23:59-05:00",
+      "ptc": "ADT"
+     }
+    ]
+   },
+   {
+    "kind": "qpxexpress#tripOption",
+    "saleTotal": "EUR660.00",
+    "id": "ePsPPkG8hH4NEl7xWZyo71003",
+    "slice": [
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 580,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 580,
+        "flight": {
+         "carrier": "CA",
+         "number": "6222"
+        },
+        "id": "GfCl+IS1p7x2p7UV",
+        "cabin": "COACH",
+        "bookingCode": "L",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "0",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "Lm+dogs2NqpY+mbv",
+          "aircraft": "346",
+          "arrivalTime": "2017-09-16T11:00+08:00",
+          "departureTime": "2017-09-15T19:20+02:00",
+          "origin": "MUC",
+          "destination": "PEK",
+          "originTerminal": "2",
+          "destinationTerminal": "3",
+          "duration": 580,
+          "operatingDisclosure": "OPERATED BY LUFTHANSA",
+          "mileage": 4795
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 620,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 620,
+        "flight": {
+         "carrier": "CA",
+         "number": "6223"
+        },
+        "id": "GsaudlNjqdgUPcNz",
+        "cabin": "COACH",
+        "bookingCode": "L",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "1",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "L0A0weCs8bMc2mbT",
+          "aircraft": "346",
+          "arrivalTime": "2017-10-03T17:00+02:00",
+          "departureTime": "2017-10-03T12:40+08:00",
+          "origin": "PEK",
+          "destination": "MUC",
+          "originTerminal": "3",
+          "destinationTerminal": "2",
+          "duration": 620,
+          "operatingDisclosure": "OPERATED BY LUFTHANSA",
+          "mileage": 4795
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "pricing": [
+     {
+      "kind": "qpxexpress#pricingInfo",
+      "fare": [
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "carrier": "CA",
+        "origin": "MUC",
+        "destination": "BJS",
+        "basisCode": "LKRTLH"
+       },
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "carrier": "CA",
+        "origin": "BJS",
+        "destination": "MUC",
+        "basisCode": "LKRTLH"
+       }
+      ],
+      "segmentPricing": [
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "segmentId": "GfCl+IS1p7x2p7UV"
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "segmentId": "GsaudlNjqdgUPcNz"
+       }
+      ],
+      "baseFareTotal": "EUR210.00",
+      "saleFareTotal": "EUR210.00",
+      "saleTaxTotal": "EUR450.00",
+      "saleTotal": "EUR660.00",
+      "passengers": {
+       "kind": "qpxexpress#passengerCounts",
+       "adultCount": 1
+      },
+      "tax": [
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "DE_001",
+        "chargeType": "GOVERNMENT",
+        "code": "DE",
+        "country": "DE",
+        "salePrice": "EUR6.39"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YQ_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YQ",
+        "salePrice": "EUR7.46"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YR_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YR",
+        "salePrice": "EUR360.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "RA_002",
+        "chargeType": "GOVERNMENT",
+        "code": "RA",
+        "country": "DE",
+        "salePrice": "EUR21.97"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "OY_001",
+        "chargeType": "GOVERNMENT",
+        "code": "OY",
+        "country": "DE",
+        "salePrice": "EUR41.99"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "CN_001",
+        "chargeType": "GOVERNMENT",
+        "code": "CN",
+        "country": "CN",
+        "salePrice": "EUR12.19"
+       }
+      ],
+      "fareCalculation": "MUC CA BJS 112.26LKRTLH CA MUC 112.26LKRTLH NUC 224.52 END ROE 0.935287 FARE EUR 210.00 XT 6.39DE 41.99OY 21.97RA 12.19CN 7.46YQ 360.00YR",
+      "latestTicketingTime": "2017-02-24T23:59-05:00",
+      "ptc": "ADT"
+     }
+    ]
+   },
+   {
+    "kind": "qpxexpress#tripOption",
+    "saleTotal": "EUR665.00",
+    "id": "ePsPPkG8hH4NEl7xWZyo71005",
+    "slice": [
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 580,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 580,
+        "flight": {
+         "carrier": "CA",
+         "number": "6222"
+        },
+        "id": "GfCl+IS1p7x2p7UV",
+        "cabin": "COACH",
+        "bookingCode": "L",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "0",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "Lm+dogs2NqpY+mbv",
+          "aircraft": "346",
+          "arrivalTime": "2017-09-16T11:00+08:00",
+          "departureTime": "2017-09-15T19:20+02:00",
+          "origin": "MUC",
+          "destination": "PEK",
+          "originTerminal": "2",
+          "destinationTerminal": "3",
+          "duration": 580,
+          "operatingDisclosure": "OPERATED BY LUFTHANSA",
+          "mileage": 4795
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 620,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 620,
+        "flight": {
+         "carrier": "CA",
+         "number": "961"
+        },
+        "id": "GhzHhh0I6msTPfvv",
+        "cabin": "COACH",
+        "bookingCode": "T",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "1",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LVsUdycdsDzn+UrU",
+          "aircraft": "333",
+          "arrivalTime": "2017-10-03T05:30+02:00",
+          "departureTime": "2017-10-03T01:10+08:00",
+          "origin": "PEK",
+          "destination": "MUC",
+          "originTerminal": "3",
+          "destinationTerminal": "2",
+          "duration": 620,
+          "mileage": 4795,
+          "meal": "Breakfast"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "pricing": [
+     {
+      "kind": "qpxexpress#pricingInfo",
+      "fare": [
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "carrier": "CA",
+        "origin": "MUC",
+        "destination": "BJS",
+        "basisCode": "LKRTLH"
+       },
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AXxPWtIc8mmWC+KXefkimGaKEl3SVrp3tC8T1MEs+cl6",
+        "carrier": "CA",
+        "origin": "BJS",
+        "destination": "MUC",
+        "basisCode": "TKRTDE9"
+       }
+      ],
+      "segmentPricing": [
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AcEy1++k2seyATAqRAFJbQlqR7MzWab5VCXU4pgCDTr/",
+        "segmentId": "GfCl+IS1p7x2p7UV"
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AXxPWtIc8mmWC+KXefkimGaKEl3SVrp3tC8T1MEs+cl6",
+        "segmentId": "GhzHhh0I6msTPfvv"
+       }
+      ],
+      "baseFareTotal": "EUR245.00",
+      "saleFareTotal": "EUR245.00",
+      "saleTaxTotal": "EUR420.00",
+      "saleTotal": "EUR665.00",
+      "passengers": {
+       "kind": "qpxexpress#passengerCounts",
+       "adultCount": 1
+      },
+      "tax": [
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "DE_001",
+        "chargeType": "GOVERNMENT",
+        "code": "DE",
+        "country": "DE",
+        "salePrice": "EUR6.39"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YQ_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YQ",
+        "salePrice": "EUR7.46"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YR_I",
+        "chargeType": "CARRIER_SURCHARGE",
+        "code": "YR",
+        "salePrice": "EUR330.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "RA_002",
+        "chargeType": "GOVERNMENT",
+        "code": "RA",
+        "country": "DE",
+        "salePrice": "EUR21.97"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "OY_001",
+        "chargeType": "GOVERNMENT",
+        "code": "OY",
+        "country": "DE",
+        "salePrice": "EUR41.99"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "CN_001",
+        "chargeType": "GOVERNMENT",
+        "code": "CN",
+        "country": "CN",
+        "salePrice": "EUR12.19"
+       }
+      ],
+      "fareCalculation": "MUC CA BJS 112.26LKRTLH CA MUC M 149.68TKRTDE9 NUC 261.94 END ROE 0.935287 FARE EUR 245.00 XT 6.39DE 41.99OY 21.97RA 12.19CN 7.46YQ 330.00YR",
+      "latestTicketingTime": "2017-02-24T23:59-05:00",
+      "ptc": "ADT"
+     }
+    ]
+   }
+  ]
+ }
+}
