@@ -1,7 +1,10 @@
 # Pycharm related files
-# /.idea/*
+/.idea/*
 
 *.pyc
 
 # Google API key file
 *.key
+
+# database file
+*.db-journal
