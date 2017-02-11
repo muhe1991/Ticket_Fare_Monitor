@@ -1,6 +1,7 @@
 import sqlite3
 import os
 import pandas as pd
+import time
 
 # conn = sqlite3.connect('test.db')
 #
@@ -55,13 +56,29 @@ class TicketFareDatabase(object):
             self.db_conn = sqlite3.connect('%s.db' % self.db_name)
             self.db_init()
 
-    def insert_an_entry(self, table_name, city_from, city_to, code_depart, code_return,
-                        date_depart, date_return, query_time, fare):
-        self.db_conn.execute("INSERT INTO %s (FROM_CITY, TO_CITY, DEPART_CODE, RETURN_CODE, DEPART_DATE, RETURN_DATE, QUERY_TIME, FARE) \
-                             VALUES (?, ?, ?, ?, ?, ?, ?, ?)" % table_name,
-                             (city_from, city_to, code_depart, code_return, date_depart, date_return, query_time, fare))
+    def insert_an_entry(self, table_name, from_city, to_city, depart_code, return_code,
+                        depart_date, return_date, query_time, fare):
+        # Check if a query exists
+        df = pd.read_sql_query('''SELECT * FROM %s WHERE
+                                  FROM_CITY = '%s' AND
+                                  TO_CITY = '%s' AND
+                                  DEPART_CODE = '%s' AND
+                                  RETURN_CODE = '%s' AND
+                                  DEPART_DATE = '%s' AND
+                                  RETURN_DATE = '%s' AND
+                                  QUERY_TIME = '%s' AND
+                                  FARE = %s
+                                ''' % (table_name, from_city, to_city, depart_code, return_code,
+                                       depart_date, return_date, query_time, fare), self.db_conn)
+        if len(df) == 0:
+            self.db_conn.execute("INSERT INTO %s (FROM_CITY, TO_CITY, DEPART_CODE, RETURN_CODE, DEPART_DATE, RETURN_DATE, QUERY_TIME, FARE) \
+                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)" % table_name,
+                                 (from_city, to_city, depart_code, return_code, depart_date, return_date, query_time, fare))
+            print "Records created successfully"
+        else:
+            print "WARNING: Entry exists, abandon insert."
+
         self.db_conn.commit()
-        print "Records created successfully";
 
     def db_close(self):
         self.db_conn.close()
@@ -93,7 +110,38 @@ class TicketFareDatabase(object):
                              query_time=lowest_fare_entry['QUERY_TIME'],
                              fare=lowest_fare_entry['FARE'])
 
+    def is_lowest_fare(self, from_city, to_city, depart_date, return_date):
 
+        df = pd.read_sql_query('''SELECT * FROM LOWESTTICKETFARE WHERE
+                                  from_city = '%s' AND
+                                  to_city = '%s' AND
+                                  depart_date = '%s' AND
+                                  return_date = '%s'
+                                ''' % (from_city, to_city, depart_date, return_date), self.db_conn)
+
+        lowest = df.loc[df['FARE'].idxmin()]
+
+        if 8 <= int(time.strftime('%H')) < 20:
+            query_time = time.strftime('%Y-%m-%d (morning)')
+        else:
+            query_time = time.strftime('%Y-%m-%d (night)')
+
+        if lowest['QUERY_TIME'] == query_time:
+            return True
+        else:
+            df = pd.read_sql_query('''SELECT * FROM LOWESTTICKETFARE WHERE
+                                              from_city = '%s' AND
+                                              to_city = '%s' AND
+                                              depart_date = '%s' AND
+                                              return_date = '%s' AND
+                                              query_time = '%s'
+                                            ''' % (from_city, to_city, depart_date, return_date, query_time), self.db_conn)
+            newest = df.ix[0]
+            if lowest['FARE'] == newest['FARE']:
+                return True
+
+            else:
+                return False
 
 
 if __name__ == "__main__":

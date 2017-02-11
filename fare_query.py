@@ -1,24 +1,7 @@
-import json
 import db
-import os
+import utilities
 import time
 from googleapiclient.discovery import build
-
-
-def fetch_api_key(file_name):
-    """
-    Fetch the API key from the key file, which is not supposed to be public
-    :param file_name:
-    :return:
-    """
-    if os.path.isfile(file_name):
-        f = open(file_name)
-        api_key = f.read()
-        f.close()
-        return api_key
-    else:
-        print "ERROR: Path file is missing."
-        return None
 
 
 def build_request_body(origin, destination, depart_date, return_date, solutions):
@@ -56,7 +39,7 @@ def build_request_body(origin, destination, depart_date, return_date, solutions)
 
 def perform_a_query(from_city, to_city, date_depart, date_return, solutions=5):
     body = build_request_body(from_city, to_city, date_depart, date_return, solutions)
-    api_key = fetch_api_key(file_name='qpxExpress.key')
+    api_key = utilities.fetch_api_key(file_name='qpxExpress.key')
     service = build('qpxExpress', 'v1', developerKey=api_key)
 
     request = service.trips().search(body=body)
@@ -79,32 +62,39 @@ def perform_a_query(from_city, to_city, date_depart, date_return, solutions=5):
     ticket_fare_db = db.TicketFareDatabase()
     ticket_fare_db.db_connect()
     # Fetch current day as the query date, formatted output of time, e.g. 2017-02-01:08
-    query_time = time.strftime('%Y-%m-%d:%H')
+    if 8 <= int(time.strftime('%H')) < 20:
+        query_time = time.strftime('%Y-%m-%d (morning)')
+    else:
+        query_time = time.strftime('%Y-%m-%d (night)')
 
     ticket_fare_db.insert_an_entry(table_name='LOWESTTICKETFARE',
-                                   city_from=from_city,
-                                   city_to=to_city,
-                                   code_depart=choice_list[0]['depart'],
-                                   code_return=choice_list[0]['return'],
-                                   date_depart=date_depart,
-                                   date_return=date_return,
+                                   from_city=from_city,
+                                   to_city=to_city,
+                                   depart_code=choice_list[0]['depart'],
+                                   return_code=choice_list[0]['return'],
+                                   depart_date=date_depart,
+                                   return_date=date_return,
                                    query_time=query_time,
                                    fare=choice_list[0]['price'])
 
     for choice in choice_list:
-        print choice['depart'], choice['return'], choice['price']
+        # print choice['depart'], choice['return'], choice['price']
         ticket_fare_db.insert_an_entry(table_name='TICKETFARE',
-                                       city_from=from_city,
-                                       city_to=to_city,
-                                       code_depart=choice['depart'],
-                                       code_return=choice['return'],
-                                       date_depart=date_depart,
-                                       date_return=date_return,
+                                       from_city=from_city,
+                                       to_city=to_city,
+                                       depart_code=choice['depart'],
+                                       return_code=choice['return'],
+                                       depart_date=date_depart,
+                                       return_date=date_return,
                                        query_time=query_time,
                                        fare=choice['price'])
 
+    is_lowest = ticket_fare_db.is_lowest_fare(from_city=from_city,
+                                  to_city=to_city,
+                                  depart_date=date_depart,
+                                  return_date=date_return)
     ticket_fare_db.db_close()
-    return [query_time, choice_list[0]['depart'], choice_list[0]['return'], choice_list[0]['price']]
+    return [query_time, choice_list[0]['depart'], choice_list[0]['return'], choice_list[0]['price'], is_lowest]
 
 
 if __name__ == "__main__":
