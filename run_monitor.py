@@ -1,5 +1,7 @@
+#! /usr/bin/python
+# encoding=utf-8
+
 import fare_query
-import fare_check
 import utilities
 
 
@@ -64,5 +66,4 @@ def run_monitor():
                subject='Ticket Fare Notice', body=email_str)
 
 
-if __name__ == "__main__":
-    run_monitor()
+run_monitor()
